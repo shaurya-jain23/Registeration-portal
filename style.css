@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner CSS start */
+
+.banner{
+    background-image: url("IMG_0489.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: cover;
+    height: 88%;
+    padding-top: 40px;
+    padding-left: 50px;
+    overflow: hidden;
+    margin: 0;
+}
+.logo a img{
+    display: flex;
+    height: 35px;
+}
+.banner-text{
+    margin-top: 7vw;
+    /* margin-bottom: 4vh; */
+    display: inline-block;
+}
+.banner-text h1{
+    color: white;
+    font-size: 450%;
+    font-weight: 600;
+    line-height: 115%;
+    letter-spacing: 2%;
+}
+#span1{
+    color: #4F709C;
+}
+#span2{
+    color:#E5D283;
+}
+.banner-text p{
+    margin-top: 6vh;
+}
+.desc{
+    display: inline-block;
+    width: 45vw;
+    font-size: 2vh;
+    color: white;
+    margin-bottom: 3vw;
+}
+.loginBtn button{
+    color: #E5D283;
+    border: 1.5px solid #E5D283;
+    background-color: #F0F0F033;
+    padding: 5px 15px 5px 25px;
+    font-weight: 500;
+    font-size: 120%;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 5vw;
+    display: inline-block;
+}
+.loginBtn button:hover{
+    color: white;
+    background-color: rgb(229, 210, 131, .20);
+}
+/* Banner CSS ends */
+
+/* Marquee CSS start  */
+.text-wrapper1,.text-wrapper2{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #213555;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.text-wrapper1 div{
+    white-space: nowrap;
+    padding: 0 3rem;
+    letter-spacing: 1px;
+    animation: move-rtl 20s linear infinite;
+}
+.text-wrapper2 div{
+    white-space: nowrap;
+    padding: 0 3rem;
+    letter-spacing: 1px;
+    animation: move-lft 20s linear infinite;
+}
+@keyframes move-rtl{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes move-lft{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@media (max-width: 768px) {
+    .text-wrapper1,.text-wrapper2 {
+        font-size: 24px; 
+    }
+    
+    .text-wrapper1 div img, .text-wrapper2 div img {
+        width: 1rem; 
+        height: auto; 
+    }
+  }
+/* Marquee CSS ends  */
+
+/* slider CSS start  */
+
+section h2{
+    display: inline-block;
+    margin: 30px 0 0 30px;
+    color: #4F709C;
+    font-size: 6vh;
+    font-weight: 600;
+}
+
+.modules{
+    min-height: 30vh;
+    display: grid;
+    place-items: center;
+}
+
+.modules h2{
+    color: #4F709C;
+    align-items: flex-start;
+}
+
+.slider{
+    height: 300px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-track1{
+    display: flex;
+    width: calc(400px * 18);
+    animation: scrollRight 40s linear infinite;
+}
+
+.slide-track1:hover{
+    animation-play-state: paused;
+}
+.slide-track2{
+    display: flex;
+    width: calc(400px * 18);
+    animation: scrollLeft 40s linear infinite;
+}
+
+.slide-track2:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scrollRight{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(calc(-400px * 9));
+    }
+}
+@keyframes scrollLeft{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-400px * 9));
+    }
+}
+
+.cards{
+    height: 250px;
+    width: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 5px 5px 20px black; */
+    /* padding: 15px; */
+    margin: 15px;
+    perspective: 100px;
+}
+
+
+.cards img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    display: block;
+}
+.cards img:hover{
+    transform: translateZ(10px);
+}
+
+.content{
+    height: 250px;
+    width: 350px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background:rgb(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: baseline;
+    /* align-items: center; */
+    opacity: 0;
+    transition: 0.6s;
+    padding: 15px;
+}
+.content:hover{
+    opacity: 1;
+}
+
+.content h3{
+    color: white;
+}
+.content p{
+    color: white;
+}
+.content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.content:hover > *{
+    transform: translateY(0px);
+}
+/* slider CSS ends  */
+
+/* FAQ CSS starts  */
+
+.faqsection{
+    min-height: cover;
+    width: 85%;
+    margin: 5vw 5vw 20vw 5vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5vw;
+}
+.title{
+    font-size: 50px;
+    color: #4F709C;
+    font-weight: 700;
+    margin : 1rem 0;
+    padding-left:3vw ;
+}
+.faq{
+    align-self: center;
+    max-width: 90%;
+    margin-top: 2rem;
+    padding: 3vh;
+    border-bottom: 1rem;
+    border-bottom: 2px solid black;
+    cursor : pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #213555;
+    font-weight: 600;
+    font-family: 'Inter';
+}
+.question h3{
+    font-size: 1.5rem;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #213555;
+    font-family: 'Inter';
+}
+.faq img {
+    transition: all 0.5s ease-in-out;
+  }
+  
+.faq.active .answer{
+    max-height: 300px;
+}
+@media screen and (max-width :750px) {
+    .banner{
+        padding-top: 30px;
+        padding-left: 20px;
+        overflow: hidden;
+        margin: 0;
+    }
+    .banner-text{
+        margin-top: 12vw;
+        margin-bottom: 7vw;
+        display: inline-block;
+    }
+    .banner-text h1{
+        color: white;
+        font-size: 6vh;
+        font-weight: 600;
+        line-height: 7vh;
+        letter-spacing: 1px;
+    }
+    .banner-text p{
+        margin-top: 7vw;
+    }
+    .desc{
+        display: inline-block;
+        font-size: 3vw;
+        width: 85vw;
+        color: white;
+    }
+
+    .logo a img{
+        display: flex;
+        height: 25px;
+    }
+    section h2{
+        margin: 30px 0 0 10px;
+        font-size: 6vh;
+    }
+    .slider{
+        height: 250px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .cards{
+        height: 220px;
+        width: 310px;
+        margin: 10px;
+        perspective: 100px;
+    }
+    .content{
+        height: 220px;
+        width: 310px;
+        padding: 10px;
+    }
+    .faqsection {
+        /* width :99%; */
+        
+    }
+    .question h3{
+        margin-right: 3px;
+        font-size: 3vh;
+    }
+    /* .question img{
+        height: 3vh;
+    } */
+    .title {
+        font-size :2rem; 
+        padding-left :3vw; 
+    }
+    
+    .answer p {
+        font-size :1.2rem; 
+    }
+ }
+
+/* FAQ CSS ends  */
+
+/* footer CSS starts */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4F709C;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+  }
+  
+  .footer-left {
+    flex-shrink: 0;
+  }
+  
+  .footer-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer a {
+    margin-left: 0.5rem;
+  }
+  
+  .footer img {
+    
+    height: 20px;
+  }
+/* footer CSS ends */
